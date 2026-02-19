@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  /* layout */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* fundo (opção 2) */
+  background:
+    radial-gradient(800px 500px at 10% 15%, rgba(255, 255, 255, .25), transparent 60%),
+    radial-gradient(700px 450px at 90% 10%, rgba(255, 255, 255, .18), transparent 55%),
+    radial-gradient(700px 500px at 15% 90%, rgba(0, 0, 0, .08), transparent 60%),
+    radial-gradient(700px 500px at 85% 85%, rgba(0, 0, 0, .06), transparent 60%),
+    radial-gradient(circle at 30% 35%, #5b8dff 0%, transparent 45%),
+    radial-gradient(circle at 70% 30%, #00e6ff 0%, transparent 45%),
+    radial-gradient(circle at 60% 80%, #00ffd1 0%, transparent 45%),
+    linear-gradient(135deg, #1ea7ff 0%, #00d4ff 55%, #00ffd1 100%);
+
+  /* necessário pro overlay */
+  position: relative;
+  overflow: hidden;
+}
+
+/* película escura por cima do fundo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18); /* ajuste: 0.12 (leve) ~ 0.30 (escuro) */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card acima do overlay */
+.container {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+  width: 360px;
+}
+
+.logo{
+  width: 170px;
+  height: auto;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  margin: 0 auto 18px auto;
+}
+
+h1 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 18px;
+  color: #666;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #3685ca;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s;
+  width: 100%;
+  display: block;
+}
+
+.btn:hover {
+  background: #173beb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+

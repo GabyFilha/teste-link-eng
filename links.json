@@ -1,0 +1,28 @@
+{
+  "title": "Engenharia Vydence",
+  "subtitle": "Controle da Engenharia",
+  "logo": "./Logo_Vydence_Small.png",
+  "links": [
+    {
+      "label": "WhatsApp Suporte",
+      "url": "https://wa.me/5516981338019"
+    },
+    {
+      "label": "Site Oficial",
+      "url": "https://vydence.com"
+    },
+    {
+      "label": "SC's",
+      "url": "#"
+    },
+    {
+      "label": "Controle de SA's",
+      "url": "#"
+    },
+    {
+      "label": "Armázem 92",
+      "url":"#"
+    }
+  ]
+}
+
